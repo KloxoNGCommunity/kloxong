@@ -123,7 +123,7 @@ foreach($slist as $b) {
 		// MR -- remove old data for domain in letsencrypt data
 		exec("'rm' -rf {$lepath}/{live,archive,renewal}/{$dom}-*");
 
-		exec("'rm' -f {$sslpath}/{$dom}*.{key,crt,ca,pem}");
+		exec("'rm' -f {$sslpath}/{$dom}{.key,.crt,.ca,.pem}");
 
 		if ($b->parent_domain) {
 			$par = $b->parent_domain;

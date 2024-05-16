@@ -375,10 +375,11 @@ class SslCert extends Lxdb
 			$acpath = "/root/.acme.sh";
 			$lepath = "/etc/letsencrypt";
 			$stpath = "/root/.startapi.sh";
-
-			exec("'rm' -rf {$acpath}/{$name}*");
-			exec("'rm' -rf {$lepath}/{live,archive,renewal}/{$name}* {$spath}/{$name}*");
-			exec("'rm' -rf {$stpath}/{$name}*");
+			
+			// JP -- big error here where $name had wildcard after it causing matching and deleting of similar domain names
+			exec("'rm' -rf {$acpath}/{$name}");
+			exec("'rm' -rf {$lepath}/{live,archive,renewal}/{$name} {$spath}/{$name}{.ca,_acme.sh,.ca,.crt,.key,.pem}");
+			exec("'rm' -rf {$stpath}/{$name}");
 
 			lxshell_return("sh", "/script/fixweb", "--domain={$name}");
 			createRestartFile("restart-web");
@@ -918,7 +919,8 @@ class SslCert extends Lxdb
 				exec("ln -sf {$sslparent}.{$v} {$targetpath}/{$parent->nname}.{$v}");
 			}
 		}
-	
+//update config files
+		exec("sh /script/fixweb --domain={$parent->nname}");
 		exec("sh /script/fixweb --domain={$this->parent_domain}");
 	//	createRestartFile($gbl->getSyncClass(null, $this->syncserver, 'web'));
 		createRestartFile("restart-web");
