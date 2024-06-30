@@ -5,7 +5,7 @@ if [ "$(rpm -qa rpmdevtools)" == "" ] ; then
 fi
 
 if [ "${1}" == "" ] ; then
-	newver="10.5"
+	newver="10.2"
 else
 	newver=${1}
 fi

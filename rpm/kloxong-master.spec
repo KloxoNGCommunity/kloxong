@@ -33,7 +33,7 @@
 Name: %{productname}
 Summary: Kloxo Next Generation web panel
 Version: 0.1.3
-Release: 7
+Release: 8
 #Release: beta.%{build_timestamp}
 License: GPL
 Group: Applications/Internet
@@ -169,6 +169,9 @@ EOF
 
 
 %changelog
+* Sun Jun 30 2024 John Parnell Pierce <john@luckytanuki.com>
+- Due to install issues with latest Maria 10.5 packages have rolled back to 10.2
+
 * Wed Sep 6 2023 John Parnell Pierce <john@luckytanuki.com> - 0.1.3-7
 - Fix broken paths for fcgi handler
 
