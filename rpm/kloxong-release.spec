@@ -3,7 +3,7 @@
 Summary: KloxoNG release file and package configuration
 Name: kloxong-release
 Version: 0.1.1
-Release: 13
+Release: 14
 License: AGPLV3
 Group: System Environment/Base
 URL: http://kloxong.org/
@@ -68,9 +68,9 @@ enabled_metadata=1
 [kloxong-release-version-arch]
 name=KloxoNG - release-version-arch
 baseurl=https://%{repohost}/kloxong/release/centos\$releasever/\$basearch/
-#mirrorlist=https://%{mirrorhost}/kloxong-release-centos\$releasever-\$basearch-mirrors.txt
+mirrorlist=https://%{mirrorhost}/kloxong-release-centos\$releasever-\$basearch-mirrors.txt
 skip_if_unavailable=True
-enabled=1
+enabled=0
 gpgcheck=0
 
 [kloxong-srpms]
