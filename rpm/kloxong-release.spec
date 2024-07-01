@@ -3,7 +3,7 @@
 Summary: KloxoNG release file and package configuration
 Name: kloxong-release
 Version: 0.1.1
-Release: 12
+Release: 13
 License: AGPLV3
 Group: System Environment/Base
 URL: http://kloxong.org/
@@ -136,7 +136,7 @@ gpgcheck=0
 [kloxong-mariadb]
 name=KloxoNG - mariadb repo
 #baseurl=http://yum.mariadb.org/10.2/centos/\$releasever/\$basearch/
-baseurl=https://archive.mariadb.org/yum/10.2/\$releasever/\$basearch/
+baseurl=https://archive.mariadb.org/yum/10.2/centos/\$releasever/\$basearch/
 #baseurl=https://dlm.mariadb.com/repo/mariadb-server/10.2/yum/centos/\$releasever/\$basearch
 enabled=1
 gpgcheck=0
