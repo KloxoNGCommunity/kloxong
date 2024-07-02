@@ -1,5 +1,24 @@
 KloxoNG install instructions
 
+###############################
+Note: Cento 7 is at End of life
+###############################
+
+To continue to run Centos 7 you need to switch the Centos repository over to the vault.centos.org archive
+
+To do this, replacement copies of CentOS-Base.repo and CentOS-Vault.repo can be found at https://github.com/KloxoNGCommunity/kloxong/tree/master/rpm . These must be copied of the existing CentOS-Base.repo and CentOS-Vault.repo in /etc/yum.repos.d .
+
+Running the following from your command line should do this.
+
+wget -O /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/KloxoNGCommunity/kloxong/master/rpm/CentOS-Base.repo
+wget -O /etc/yum.repos.d/CentOS-Vault.repo https://raw.githubusercontent.com/KloxoNGCommunity/kloxong/master/rpm/CentOS-Vault.repo
+
+then run
+
+yum clean all
+
+###############################
+
 A. pre-install -- better for fresh install
 
     cd /
