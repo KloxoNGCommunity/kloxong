@@ -20,11 +20,23 @@ echo "*** Upgrade MariaDB from ${oldver} to ${newver} ***"
 if [ "${status}" == "12" ] ; then
 	echo "- Begin process..."
 
+
+	if [ "${newver}" == "10.2" ]||[ "${newver}" == "10.3" ] ; then
+
+	sed -i -e "s:baseurl\=http\:\/\/yum.mariadb.org:baseurl\=https\:\/\/archive.mariadb.org\/yum:g" /etc/yum.repos.d/kloxong.repo
+	sed -i -e "s:archive.mariadb.org/\(.*\)/centos/\(.*\):archive.mariadb.org/yum/${newver}/centos/\2:g" /etc/yum.repos.d/kloxong.repo
+	else
+	
+	sed -i -e "s:baseurl\=https\:\/\/archive.mariadb.org\/yum:baseurl\=http\:\/\/yum.mariadb.org:g" /etc/yum.repos.d/kloxong.repo
 	sed -i -e "s:yum.mariadb.org/\(.*\)/centos/\(.*\):yum.mariadb.org/${newver}/centos/\2:g" /etc/yum.repos.d/kloxong.repo
+
+
+	fi
 	yum clean all
+	service mysql stop
 	yum remove MariaDB-gssapi-* -y
+	yum --skip-broken remove MariaDB-server -y
 	yum update MariaDB* -y
-	yum remove MariaDB-server -y
 	yum install MariaDB-server -y
 
 	'cp' -f /etc/my.cnf.d/server.cnf.rpmsave /etc/my.cnf.d/server.cnf
@@ -59,7 +71,7 @@ if [ "${status}" == "12" ] ; then
 	sh /script/restart-mysql
 
 	pass=$(cd /usr/local/lxlabs/kloxo/httpdocs; lxphp.exe ../bin/common/mp.php)
-
+	echo "mysql_upgrade..."
 	mysql_upgrade -u root -p${pass}
 
 	sh /script/restart-mysql
