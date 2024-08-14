@@ -11,12 +11,12 @@ To do this, replacement copies of CentOS-Base.repo and CentOS-Vault.repo must be
 First do a minimum install of Centos 7 (CentOS-7-x86_64-Minimal-2009.iso)
 
 If necessary activate network connectivity with
-'''nmtui'''
+    nmtui
 
 Running the following from your command line should do this.
 
-sudo curl -O https://kloxo.org/centos7/eolrepofix
-sudo sh eolrepofix
+    sudo curl -O https://kloxo.org/centos7/eolrepofix
+    sudo sh eolrepofix
 
 
 
