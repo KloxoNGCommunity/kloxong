@@ -1,4 +1,8 @@
 #!/bin/sh
 
-wget -O /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/KloxoNGCommunity/kloxong/master/rpm/CentOS-Base.repo
-wget -O /etc/yum.repos.d/CentOS-Vault.repo https://raw.githubusercontent.com/KloxoNGCommunity/kloxong/master/rpm/CentOS-Vault.repo
+curl https://kloxo.org/centos7/CentOS-Base.repo > /etc/yum.repos.d/CentOS-Base.repo
+curl https://kloxo.org/centos7/CentOS-Vault.repo > /etc/yum.repos.d/CentOS-Vault.repo
+rpm -ivh https://github.com/KloxoNGCommunity/kloxong/raw/initial-rpm/kloxong-release.rpm
+yum clean all
+yum update kloxong-* -y
+yum install kloxong -y
