@@ -169,7 +169,7 @@ EOF
 
 
 %changelog
-* Mon Aug 2019 John Parnell Pierce <john@luckytanuki.com>  - 0.1.3-10
+* Mon Aug 19 2024 John Parnell Pierce <john@luckytanuki.com>  - 0.1.3-10
 - Fix issues with MariaDB upgrade script
 
 * Sun Jun 30 2024 John Parnell Pierce <john@luckytanuki.com>
