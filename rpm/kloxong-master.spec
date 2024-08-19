@@ -33,7 +33,7 @@
 Name: %{productname}
 Summary: Kloxo Next Generation web panel
 Version: 0.1.3
-Release: 9
+Release: 10
 #Release: beta.%{build_timestamp}
 License: GPL
 Group: Applications/Internet
@@ -169,6 +169,9 @@ EOF
 
 
 %changelog
+* Mon Aug 2019 John Parnell Pierce <john@luckytanuki.com>  - 0.1.3-10
+- Fix issues with MariaDB upgrade script
+
 * Sun Jun 30 2024 John Parnell Pierce <john@luckytanuki.com>
 - Due to install issues with latest Maria 10.5 packages have rolled back to 10.2
 

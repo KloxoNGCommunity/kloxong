@@ -12,7 +12,7 @@ Branch:
 
 ===================
 
-The current release Kloxong 0.1.3-1 - adds php74 and nat ip mapping to KloxoNG. 
+The Kloxong 0.1.3 - adds php74 and nat ip mapping to KloxoNG. 
 
 <a href="https://copr.fedorainfracloud.org/coprs/kloxong/Testing/package/kloxong/"><img src="https://copr.fedorainfracloud.org/coprs/kloxong/Testing/package/kloxong/status_image/last_build.png" /></a>
 

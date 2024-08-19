@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wget -O /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/KloxoNGCommunity/kloxong/master/rpm/CentOS-Base.repo
+wget -O /etc/yum.repos.d/CentOS-Vault.repo https://raw.githubusercontent.com/KloxoNGCommunity/kloxong/master/rpm/CentOS-Vault.repo
