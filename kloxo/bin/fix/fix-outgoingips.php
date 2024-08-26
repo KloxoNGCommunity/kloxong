@@ -57,7 +57,7 @@ if(!$process){
 					}
 					if(array_key_exists($ip,$ipmap)){
 						print("  map '{$ip}' to $ipmap[$ip]\n");
-						$ip=$ipmap[$ip];
+						$ip=trim($ipmap[$ip]);
 					}
 					
 					$t .= "{$dns->nname}:{$ip}\n";

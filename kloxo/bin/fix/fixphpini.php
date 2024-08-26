@@ -98,6 +98,15 @@ foreach($plist as $s) {
 	if (!file_exists("/var/log/php-fpm")) {
 		mkdir("/var/log/php-fpm",0755);
 	}
+	
+	
+	if (file_exists("/usr/lib/systemd/system/php-fpm.service") && !file_exists("/etc/systemd/system/php-fpm.service.d/override.conf")) {
+		mkdir("/etc/systemd/system/php-fpm.service.d/",0755);
+		exec("'cp' -rf /usr/local/lxlabs/kloxo/file/php-fpm/etc/systemd/system/php-fpm.service.d/override.conf /etc/systemd/system/php-fpm.service.d/override.conf");
+		exec("'chown' root:root /etc/systemd/system/php-fpm.service.d/override.conf");
+		exec("'chmod' 0644 /etc/systemd/system/php-fpm.service.d/override.conf");
+	}
+	
 
 	if (!file_exists("/var/lib/php/session")) {
 		mkdir("/var/lib/php/session");
