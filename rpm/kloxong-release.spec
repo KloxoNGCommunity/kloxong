@@ -3,7 +3,7 @@
 Summary: KloxoNG release file and package configuration
 Name: kloxong-release
 Version: 0.1.1
-Release: 14
+Release: 15
 License: AGPLV3
 Group: System Environment/Base
 URL: http://kloxong.org/
@@ -173,7 +173,7 @@ gpgcheck=0
 # for mod-pagespeed
 [kloxong-google-mod-pagespeed]
 name=KloxoNG - google-mod-pagespeed
-baseurl=http://dl.google.com/linux/mod-pagespeed/rpm/stable/\$basearch
+baseurl=https://dl.google.com/linux/mod-pagespeed/rpm/stable/\$basearch
 enabled=1
 gpgcheck=0
 
