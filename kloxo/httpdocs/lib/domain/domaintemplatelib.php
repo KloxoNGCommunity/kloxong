@@ -224,7 +224,7 @@ class Domaintemplate extends DomainBase
 		return $nlist;
 	}
 
-/*
+/* Not Used TODO review/delete 
 	static function initThisList($parent, $class)
 	{
 		$db = new Sqlite($parent->__masterserver, "domaintemplate");

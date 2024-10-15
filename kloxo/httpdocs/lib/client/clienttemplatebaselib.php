@@ -148,7 +148,7 @@ class ClienttemplateBase extends ClientCore
 		return $ret;
 	}
 
-/*
+/* Not Used TODO review/delete 
 	static function initThisList($parent, $class)
 	{
 		$db = new Sqlite($parent->__masterserver, "clienttemplate");

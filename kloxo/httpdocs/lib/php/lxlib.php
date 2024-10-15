@@ -1579,7 +1579,7 @@ function fput_content_with_lock($file, $string)
 {
 	lfile_put_contents($file, $string);
 }
-
+/* Not Used TODO review/delete 
 function filter_object_list($list, $rule)
 {
 	$nlist = null;
@@ -1590,7 +1590,7 @@ function filter_object_list($list, $rule)
 	}
 	return $nlist;
 }
-
+*/
 function is_assoc_array($var)
 {
 	if (!is_array($var)) {
