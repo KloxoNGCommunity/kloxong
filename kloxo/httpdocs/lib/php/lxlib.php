@@ -2900,9 +2900,7 @@ function exec_class_method($class, $func)
 	$start = 2;
 	$transforming_func = null;
 
-	if (version_compare(PHP_VERSION, '5.3.0', '<')) {
-		eval($sgbl->arg_getting_string);
-	} else {
+
 	//	$arglist = get_function_arglist($start, $transforming_func);
 
 		$arglist = array();
@@ -2911,7 +2909,7 @@ function exec_class_method($class, $func)
 			$arglist[] = func_get_arg($i);
 		}
 
-	}
+
 
 	// workaround for the following php bug:
 	//   http://bugs.php.net/bug.php?id=47948
