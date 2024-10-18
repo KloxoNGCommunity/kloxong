@@ -3,6 +3,8 @@
 
 ### A Kloxo-MR fork by The Kloxo Next Generation
 
+Note: This version is for Centos 7. For RHEL8/9 compatible OS's see https://github.com/KloxoNGCommunity/kloxo
+
 Please use master branch
 
 ===================
@@ -12,7 +14,6 @@ Branch:
 
 ===================
 
-The Kloxong 0.1.3 - adds php74 and nat ip mapping to KloxoNG. 
 
 <a href="https://copr.fedorainfracloud.org/coprs/kloxong/Testing/package/kloxong/"><img src="https://copr.fedorainfracloud.org/coprs/kloxong/Testing/package/kloxong/status_image/last_build.png" /></a>
 
@@ -28,14 +29,14 @@ The aim of this project is to create a development pathway that is not dependent
 
 ### Features (based on existing Kloxo-MR features - this will change as we develop our road map)
 
-* OS: Redhat/Centos 7  (Redhat/CentOS 6 is now EOL)
+* OS: Redhat/Centos 7  (Note: Centos 7 is EOL for RHEL8/9 compatible OS's see https://github.com/KloxoNGCommunity/kloxo )
 * Billing: AWBS, WHMCS, HostBill, TheHostingTool, AccountLab Plus, Blesta and BoxBilling (note: claim by billing's author)
 * Web server: Nginx, Nginx-Proxy and Lighttpd-proxy, Hiawatha, Hiawatha-proxy and Httpd 24, beside Httpd and Lighttpd; also Dual and Multiple Web server *)
 * Webcache server: Squid, Varnish and ATS *)
-* Php: Dual-php with php 5.3/5.4 as primary and php 5.2 as secondary; multiple-php *)
+* Php: php 5.6 as primary; multiple-php 5.4 to 8.2)
 * PHP-type for Apache: php-fpm_worker/_event and fcgid_worker/_event; beside mod_php/_ruid2/_itk and suphp/_worker/_event
 * Mail server: qmail-toaster instead special qmail (in progress: change from courier-imap to dovecot as imap/pop3) *)
-* Database: MySQL or MariaDB *)
+* Database: MariaDB
 * Database Manager: PHPMyAdmin; Adminer, MyWebSql and SqlBuddy as additional **)
 * Webmail: Afterlogic Webmail Lite, Telaen, Squirrelmail, Roundcube and Rainloop; Horde and T-Dah dropped
 * FTP server: Pure-ftpd
@@ -76,6 +77,3 @@ The aim of this project is to create a development pathway that is not dependent
 - Stats:
   * Change URL from 'domain.com/stats' to 'stats.domain.com' (since 3 Sep 2016)
   
-
-
-
