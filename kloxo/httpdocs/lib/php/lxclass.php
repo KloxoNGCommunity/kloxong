@@ -268,12 +268,12 @@ abstract class Lxclass
 	function getShowInfo() { return null; }
 
 	/* Not used - TODO review and delete
-	function eeval($rule)
-	{
-		global $gbl, $sgbl, $login, $ghtml;
-
-	//	return eval("return {$rule};");
-	}
+	 *function eeval($rule)
+	 *{
+	 *	global $gbl, $sgbl, $login, $ghtml;
+	 *
+	 *//	return eval("return {$rule};");
+	 *}
 	*/
 	
 	function syncToSystemCommon()

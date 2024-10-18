@@ -841,9 +841,7 @@ function lxshell_background($cmd)
 	$start = 1;
 	$transforming_func = null;
 
-	if (version_compare(PHP_VERSION, '5.3.0', '<')) {
-		eval($sgbl->arg_getting_string);
-	} else {
+
 	//	$arglist = get_function_arglist($start, $transforming_func);
 
 		$arglist = array();
@@ -852,7 +850,6 @@ function lxshell_background($cmd)
 			$arglist[] = func_get_arg($i);
 		}
 
-	}
 
 	$cmd = getShellCommand($cmd, $arglist);
 	$cmd .= " >/dev/null 2>&1 &";
