@@ -15,14 +15,15 @@ var nsx
 var nsy
 var nstemp
 
-function drag_dropns(name){
-return
-temp=eval(name)
-temp.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP)
-temp.onmousedown=gons
-temp.onmousemove=dragns
-temp.onmouseup=stopns
-}
+// Not used and really this whole JS file needs to be updated
+//function drag_dropns(name){
+//return
+//temp=eval(name)
+//temp.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP)
+//temp.onmousedown=gons
+//temp.onmousemove=dragns
+//temp.onmouseup=stopns
+//}
 
 function gons(e){
 temp.captureEvents(Event.MOUSEMOVE)
